@@ -8,7 +8,11 @@ module tb_fir;
     reg  [15:0] xmem [0:N-1];
     reg  [34:0] ymem [0:N-1];
     integer k, errs = 0;
+`ifdef SCAN   // gate-level scan netlist: functional mode, chain idle
+    fir_pipelined dut (.clk(clk), .x_in(x_in), .y_out(y_out), .SE(1'b0), .scan_in0(1'b0), .scan_out0());
+`else
     fir_pipelined dut (.clk(clk), .x_in(x_in), .y_out(y_out));
+`endif
     always #5 clk = ~clk;
     initial begin
         $readmemh("vectors/x.hex", xmem);

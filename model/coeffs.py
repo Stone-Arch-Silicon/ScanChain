@@ -1,1 +1,1 @@
-H = [-1024, 2048, 8192, 16384, 16384, 8192, 2048, -1024]  # Q1.15 taps; edit then `make vectors`
+H = [-1021, 2237, 8191, 16381, 16381, 8191, 2237, -1021]  # Q1.15, non-power-of-2 so multipliers stay real logic

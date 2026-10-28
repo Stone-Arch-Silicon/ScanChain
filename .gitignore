@@ -1,0 +1,12 @@
+build/
+*.vcd
+*.vvp
+__pycache__/
+*.log
+*.jou
+.Xil/
+xsim.dir/
+genus.*
+fv/
+*.wdb
+work/

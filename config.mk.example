@@ -1,5 +1,3 @@
-# cp config.mk.example config.mk and edit. Paths come from your site's Synopsys install / PDK.
-LIB_SRC      ?= /path/to/NangateOpenCellLibrary_typical.lib   # only needed to build the .db
-LIB_DB       ?= $(CURDIR)/lib/stdcells.db                      # what DC reads
-CELLS_V      ?= /path/to/NangateOpenCellLibrary.v              # cell models for gate-level sim
-CHAINS       ?= 1
+# cp config.mk.example config.mk (gitignored). Override anything from ip/scan_flow/configs/<PDK>.mk here.
+PDK         ?= sky130
+SKY130_ROOT ?= /path/to/sky130A/libs.ref/sky130_fd_sc_hd

@@ -1,5 +1,9 @@
 // Self-checking TB. Preamble of zeros flushes X's (no resets in DUT), then vectors; y[k-5] checked at negedge k.
 `timescale 1ns/1ps
+`ifndef X_HEX
+`define X_HEX "examples/fir/vectors/x.hex"
+`define Y_HEX "examples/fir/vectors/y_exp.hex"
+`endif
 module tb_fir;
     parameter N = 2048;
     reg clk = 0;
@@ -15,8 +19,8 @@ module tb_fir;
 `endif
     always #5 clk = ~clk;
     initial begin
-        $readmemh("vectors/x.hex", xmem);
-        $readmemh("vectors/y_exp.hex", ymem);
+        $readmemh(`X_HEX, xmem);
+        $readmemh(`Y_HEX, ymem);
         repeat (16) @(negedge clk);                       // flush with zeros
         for (k = 0; k < N + 5; k = k + 1) begin
             if (k >= 5 && y_out !== ymem[k-5]) begin

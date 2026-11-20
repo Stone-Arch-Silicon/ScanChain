@@ -10,7 +10,10 @@ module scan_chain #(
     output logic [N-1:0] data_out,
     output logic         scan_out
 );
-
+    initial begin
+        assert (N >= 1)
+            else $fatal(1, "Scan chain width N must be >= 1");
+    end
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n)
             data_out <= '0;

@@ -33,6 +33,7 @@ uvm-hw:
 	mkdir -p $(BUILD)/uvm
 	cd $(BUILD)/uvm && $(VCS) -full64 -sverilog \
 		-ntb_opts uvm-1.2 \
+		-timescale=1ns/1ps \
 		../../../tb/uvm/uvm_hello_world.sv \
 		-top tb_top -o simv
 	cd $(BUILD)/uvm && ./simv

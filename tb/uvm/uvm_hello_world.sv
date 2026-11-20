@@ -1,6 +1,3 @@
-
-`timescale 1ns/1ps
-
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 
@@ -26,9 +23,7 @@ class hello_test extends uvm_test;
 endclass
 
 module tb_top;
-
     initial begin
         run_test("hello_test");
     end
-
 endmodule

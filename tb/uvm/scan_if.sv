@@ -1,6 +1,3 @@
-
-`timescale 1ns/1ps
-
 interface scan_if #(parameter int N = 8) (
     input logic clk
 );

@@ -1,4 +1,4 @@
-make -C sim smoke
+make -C sim simple
 
 ./simv
 

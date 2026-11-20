@@ -15,7 +15,7 @@ smoke:
 
 
 
-CASCADE_TB := $(ROOT)/tb/smoke/tb_scan_chain_cascade.sv
+CASCADE_TB := $(ROOT)/tb/tb_scan_chain_cascade.sv
 
 .PHONY: cascade
 

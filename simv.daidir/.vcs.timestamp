@@ -24,8 +24,8 @@
 -sverilog
 /soft/ece_soft_1/synopsys/vcs_2023.03/linux64/bin/vcs1
 simv
-scan_chain.sv
-tb_scan_chain.sv
+rtl/scan_chain.sv
+tb/tb_scan_chain.sv
 64
 which_declare=declare -f
 _LMFILES__modshare=/soft/ece_soft_1/modules/modulefiles/synopsys/syn_2022.12:1:/soft/ece_soft_1/modules/modulefiles/cadence/genus_19.1:1:/soft/ece_soft_1/modules/modulefiles/synopsys/vcs_2023.03:1:/soft/ece_soft_1/modules/modulefiles/synopsys/verdi_2022.06:1
@@ -94,12 +94,12 @@ BASH_FUNC_ml%%=() {  module ml "$@"_}
 0
 0
 2
-1795188232 tb_scan_chain.sv
-1795188236 scan_chain.sv
+1795188232 tb/tb_scan_chain.sv
+1795188236 rtl/scan_chain.sv
 4
 1693043931 /soft/ece_soft_1/synopsys/vcs_2023.03/linux64/lib/libvirsim.so
 1693042805 /soft/ece_soft_1/synopsys/vcs_2023.03/linux64/lib/liberrorinf.so
 1693042720 /soft/ece_soft_1/synopsys/vcs_2023.03/linux64/lib/libsnpsmalloc.so
 1693042802 /soft/ece_soft_1/synopsys/vcs_2023.03/linux64/lib/libvfs.so
-1795188257 simv.daidir
+1795188456 simv.daidir
 -1 partitionlib

@@ -1,6 +1,4 @@
-
 `timescale 1ns/1ps
-
 module tb_scan_chain;
 
     localparam int N = 8;

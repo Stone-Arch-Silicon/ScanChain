@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module scan_chain #(
     parameter int N = 8
 )(

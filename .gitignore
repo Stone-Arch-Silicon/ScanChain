@@ -13,3 +13,19 @@ lib/
 vectors/
 work/
 xsim.dir/
+
+
+simv
+simv.daidir/
+csrc/
+ucli.key
+*.vpd
+*.vcd
+*.fsdb
+
+# Build outputs
+sim/build/
+*.log
+
+# Editor files
+.vscode/

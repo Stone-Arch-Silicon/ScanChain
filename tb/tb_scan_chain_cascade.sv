@@ -97,9 +97,9 @@ module tb_scan_chain_cascade;
 
         // Test 3: Shift in a 32-bit pattern
         scan_en = 1;
-        localparam logic [TOTAL_BITS-1:0] PATTERN = 32'hDEADBEEF;
 
         for (int i = TOTAL_BITS-1; i >= 0; i--) begin
+            localparam logic [TOTAL_BITS-1:0] PATTERN = 32'hDEADBEEF;
             scan_in = PATTERN[i];
             step($sformatf("Shift In %0d", i));
         end

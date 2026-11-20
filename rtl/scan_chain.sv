@@ -15,7 +15,7 @@ module scan_chain #(
         if (!rst_n)
             data_out <= '0;
         else if (scan_en)
-            data_out <= {data_out[N-2:0], scan_in};
+            data_out <= (data_out << 1) | N'(scan_in);
         else
             data_out <= data_in;
     end
